@@ -20,6 +20,9 @@ def hangman():
     used_letters = set()  # what the user has guessed
 
     # getting user input
+    while len(word_letters) > 0:
+        # letters used
+        print('You have used there letters: ', ' '.join(used_letters))
     user_letter = input('Guess a letter: ').upper()
     if user_letter in alphabet - used_letters:
         used_letters.add(user_letter)
@@ -31,3 +34,7 @@ def hangman():
 
     else:
         print('Invalid character. Please try again.')
+
+    # gets here when len(word_letters) == 0
+
+hangman()
