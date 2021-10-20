@@ -10,11 +10,11 @@ b. As a first time visitor, I want to be challenged by the game.
 c. As a first time visitor, I want to be able to run the game again easily so i can keep playing.
 
 ### Returning Visitor Goals
-a. As a returning visitor, I want to continue to be challenged. 
+a. As a returning visitor, I want to continue to be challenged with a choice of dificulty level. 
 
-b. As a returning visitor, I want there to be lots of words so I do not have a chance of having the same word twice. 
+b. As a returning visitor, I want to keep track of my score.
 
-c. As a returning visitor, I want the experience to run exactly the same. 
+c. As a returning visitor, I want to be able to challenege other users. 
 
 # Design 
 ![Wireframe](assets/docs/hangman_wireframe.jpg)
