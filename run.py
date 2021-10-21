@@ -59,8 +59,9 @@ def restart():
     word = get_word()
     hangman()
     while input('Play again? (Y/N)').upper() == "Y":
-        word =get_word()
+        word = get_word()
         hangman()
+
 
 if __name__ == "__main__":
     restart()
