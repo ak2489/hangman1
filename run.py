@@ -4,6 +4,14 @@ from words import words
 from hangman_visual import lives_visual_dict
 
 
+def start():
+    """function for start of game"""
+    name = input('What is your name?\n')
+    print('Hello, ' + name)
+    while input('Would you like to play Hangman? (Y/N)').upper() == "Y":
+        hangman()
+
+
 # function to get random word from list
 def get_word():
     """function to get random word from list"""
@@ -66,4 +74,4 @@ def restart():
 
 
 if __name__ == "__main__":
-    restart()
+    start()
