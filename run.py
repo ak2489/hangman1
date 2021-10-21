@@ -54,15 +54,13 @@ def hangman():
         print(lives_visual_dict[lives])
         print('You died, sorry. The word was', word)
     else:
-        print('You have guessed the word', word, '\n Congratulations!!')
+        print('You have guessed the word', word, '\nCongratulations!!')
 
 
 def restart():
     """ Function to restart game after completion"""
-    word = get_word()
     hangman()
-    while input('Play again? (Y/N)').upper() == "Y":
-        word = get_word()
+    while input('\nPlay again? (Y/N)').upper() == "Y":
         hangman()
 
 
