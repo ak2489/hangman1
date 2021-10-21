@@ -24,7 +24,8 @@ def hangman():
     # getting user input
     while len(word_letters) > 0 and lives > 0:
         # letters used
-        print('You have', lives, 'lives left and you have used these letters: ', ' '.join(used_letters))
+        print('You have', lives, 'lives left')
+        print('You have used these letters: ', ' '.join(used_letters))
 
         # what the current word is (ie W - R D)
         word_list = [letter if letter in used_letters else '-' for letter in word]
@@ -37,7 +38,7 @@ def hangman():
                 word_letters.remove(user_letter)
 
             else:
-                lives = lives - 1 # takes away a life if wrong
+                lives = lives - 1  # takes away a life if wrong
                 print('Letter is not in word.')
 
         elif user_letter in used_letters:
@@ -50,7 +51,16 @@ def hangman():
     if lives == 0:
         print('You died, sorry. The word was', word)
     else:
-        print('You have guessed the word', word, '!!')
+        print('You have guessed the word', word, '\n Congratulations!!')
 
 
-hangman()
+def restart():
+    """ Function to restart game after completion"""
+    word = get_word()
+    hangman()
+    while input('Play again? (Y/N)').upper() == "Y":
+        word =get_word()
+        hangman()
+
+if __name__ == "__main__":
+    restart()
