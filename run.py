@@ -1,6 +1,7 @@
 import random
 import string
 from words import words
+from hangman_visual import lives_visual_dict
 
 
 # function to get random word from list
@@ -29,6 +30,7 @@ def hangman():
 
         # what the current word is (ie W - R D)
         word_list = [letter if letter in used_letters else '-' for letter in word]
+        print(lives_visual_dict[lives])
         print('Current word: ', ' '.join(word_list))
 
         user_letter = input('Guess a letter: ').upper()
@@ -49,6 +51,7 @@ def hangman():
 
     # gets here when len(word_letters) == 0 or when lives == 0
     if lives == 0:
+        print(lives_visual_dict[lives])
         print('You died, sorry. The word was', word)
     else:
         print('You have guessed the word', word, '\n Congratulations!!')
