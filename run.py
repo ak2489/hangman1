@@ -34,7 +34,7 @@ def hangman():
         print(lives_visual_dict[lives])
         print('Current word: ', ' '.join(word_list))
 
-        user_letter = input('Guess a letter: ').upper()
+        user_letter = input('Guess a letter:\n').upper()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
@@ -61,7 +61,7 @@ def hangman():
 def restart():
     """ Function to restart game after completion"""
     hangman()
-    while input('\nPlay again? (Y/N)').upper() == "Y":
+    while input('\nPlay again? (Y/N)\n').upper() == "Y":
         hangman()
 
 
