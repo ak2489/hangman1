@@ -22,9 +22,8 @@ def start():
     if input('Would you like to play Hangman? (Y/N)').upper() == "Y":
         hangman()
 
-    elif input() == "N":
+    elif input().upper() == "N":
         print('Goodbye!')
-        start()
 
     else:
         print('Invaild entry please select Y or N.')
@@ -100,8 +99,8 @@ def restart_game():
 
         elif restart == "N":
             game_restart = True
-            start()
             print('Goodbye!')
+            start()
 
         else:
             print('You must select Y or N. Please try again.')
