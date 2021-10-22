@@ -7,18 +7,28 @@ from hangman_visual import lives_visual_dict
 def start():
     """Sets the game up for the user asking for name
     and if they would like to start"""
+    print(
+        """
+         _   _
+        | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __
+        | |_| |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\
+        |  _  | (_| | | | | (_| | | | | | | (_| | | | |
+        |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
+                            |___/
+        """
+    )
     name = input('What is your name?\n')
     print('Hello, ' + name)
     if input('Would you like to play Hangman? (Y/N)').upper() == "Y":
         hangman()
-    
+
     elif input() == "N":
         print('Goodbye!')
         start()
 
     else:
-        start()
         print('Invaild entry please select Y or N.')
+        start()
 
 
 # function to get random word from list
