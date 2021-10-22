@@ -5,16 +5,25 @@ from hangman_visual import lives_visual_dict
 
 
 def start():
-    """function for start of game"""
+    """Sets the game up for the user asking for name
+    and if they would like to start"""
     name = input('What is your name?\n')
     print('Hello, ' + name)
-    while input('Would you like to play Hangman? (Y/N)').upper() == "Y":
+    if input('Would you like to play Hangman? (Y/N)').upper() == "Y":
         hangman()
+    
+    elif input() == "N":
+        print('Goodbye!')
+        start()
+
+    else:
+        start()
+        print('Invaild entry please select Y or N.')
 
 
 # function to get random word from list
 def get_word():
-    """function to get random word from list"""
+    """Picks a random word from words.py that the player has to guess"""
     word = random.choice(words)  # randomly chooses something from the list
 
     return word.upper()
@@ -22,7 +31,7 @@ def get_word():
 
 # function for game
 def hangman():
-    """function for hangman game"""
+    """Play the game"""
     word = get_word()
     word_letters = set(word)  # letters in word
     alphabet = set(string.ascii_uppercase)
@@ -62,15 +71,30 @@ def hangman():
     if lives == 0:
         print(lives_visual_dict[lives])
         print('You died, sorry. The word was', word)
+        restart_game()
     else:
         print('You have guessed the word', word, '\nCongratulations!!')
+        restart_game()
 
 
-def restart():
-    """ Function to restart game after completion"""
-    hangman()
-    while input('\nPlay again? (Y/N)\n').upper() == "Y":
-        hangman()
+def restart_game():
+    """ Gives player option to restart, otherwise returns to title screen """
+    game_restart = False
+
+    while not game_restart:
+        restart = input('Would you like to play Hangman? (Y/N)\n').upper()
+
+        if restart == "Y":
+            game_restart = True
+            hangman()
+
+        elif restart == "N":
+            game_restart = True
+            start()
+            print('Goodbye!')
+
+        else:
+            print('You must select Y or N. Please try again.')
 
 
 if __name__ == "__main__":
