@@ -42,3 +42,27 @@ The player then keeps guessing until they either get the word or run out if live
 
 ## Features
 
+### Existing Features
+
+#### Random Word Generator
+
+* A random word is chosen from a list of chosen words in the words.py file.
+* The word is then hidden from the player using _.
+
+![Word Generator](assets/docs/word_generator.jpg)
+
+#### User Input
+
+* Player input is registered either in the form of getting a letter correct or incorrect. 
+* Getting an input correct will show a letter in the word.
+* Getting an input incorrect will take a life away from the lives and start to draw out the hangman.
+
+![User Input](assets/docs/user_input.jpg)
+
+#### Input Validation/ Error Checking
+
+* When the player enters anything other than a letter a error message will appear telling the player.
+
+![Invaild Input](assets/docs/invalid_input.jpg)
+
+
