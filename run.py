@@ -4,7 +4,7 @@ from words import words
 from hangman_visual import lives_visual_dict
 
 
-def start():
+def start_game():
     """Sets the game up for the user asking for name
     and if they would like to start"""
     print(
@@ -18,16 +18,13 @@ def start():
         """
     )
     name = input('What is your name?\n')
-    print('Hello, ' + name)
-    if input('Would you like to play Hangman? (Y/N)').upper() == "Y":
+    print(f'Hello, {name}')
+    if input('Would you like to play Hangman? (Y)').upper() == "Y":
         hangman()
 
-    elif input().upper() == "N":
-        print('Goodbye!')
-
     else:
-        print('Invaild entry please select Y or N.')
-        start()
+        print('Please try again.')
+        start_game()
 
 
 # function to get random word from list
@@ -100,11 +97,11 @@ def restart_game():
         elif restart == "N":
             game_restart = True
             print('Goodbye!')
-            start()
+            start_game()
 
         else:
             print('You must select Y or N. Please try again.')
 
 
 if __name__ == "__main__":
-    start()
+    start_game()
