@@ -69,10 +69,67 @@ The player then keeps guessing until they either get the word or run out if live
 ### Future Features
 
 * Add difficulty setting to change amount of lives player has.
+
 * Add a scoring system.
+
 * Implement a true random word generator rather than usings a set list.  
 
-## 
+## Testing
 
+### I have manually tested the project by doing the following:
 
+* Tested python code through a PEP8 Linter using (http://pep8online.com/) and fixed any errors.
 
+* Manually tested user inputs by purposefully inputing incorrect data to confirm error messages were capturing wrong inputs.
+
+* Tested in the local terminal and on the mock terminal on the deployed site on Heroku.
+
+### Technologies Used
+
+#### Languages
+* Python.
+
+#### Libraries
+* random to select a random word.
+
+### Bugs 
+
+#### Fixed Bugs 
+* When writing out the hangman graphic, left white spaces in which messed up the look of it when printed in the terminal.
+    * Deleted the white spaces and it fixed up the way hangman graphic looked. 
+
+* word_list code was to long for one line. (line 55)
+    * Split the line up over two lines to be within the correct length.
+
+#### Unfixed bugs 
+* No unfixed bugs. 
+
+### Valiodators 
+* PEP8 
+    * No Errors returned from http://pep8online.com/
+
+## Deployment
+
+### The project was deployed using Code Institutes mock terminal for Heroku.
+
+### Steps to deploy:
+* Fork or clone this repository.
+* requirements.txt can be left empty as this project does not use any external libraries.
+* Create a new app in Heroku.
+* Select "New" and "Create new app".
+* Name the new app and click "Create new app".
+* In "Settings" select "BuildPack" and select Python and Node.js.
+* Whilst still in "Settings", click "Reveal Config Vars" and input the folloing. KEY: PORT, VALUE: 8000. Nothing else is needed here as this project does not have any sensitive files.
+* Click on "Deploy" and select your deploy method and repository.
+* Click "Connect" on selected repository.
+* Either choose "Enable Automatic Deploys" or "Deploy Branch" in the manual deploy section.
+* Heroku will now deploy the site.
+
+## Credits 
+
+* [Code Institute](https://codeinstitute.net/) for the mock terminal for the deploy to a live site.
+* [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w) inspiration on how to build a hangman game. I have also used the words list in the words.py file.
+* [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Standard&t=Hangman) for creating word art for game title and game over screens.
+
+### Thanks
+* Narender Singh - Code Institute mentor who's advice and guidance supported me in the completion of this project
