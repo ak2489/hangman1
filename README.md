@@ -62,7 +62,17 @@ The player then keeps guessing until they either get the word or run out if live
 #### Input Validation/ Error Checking
 
 * When the player enters anything other than a letter a error message will appear telling the player.
+* When a player puts anything other than 1 letter in the same error message will appear.
 
 ![Invaild Input](assets/docs/invalid_input.jpg)
+
+### Future Features
+
+* Add difficulty setting to change amount of lives player has.
+* Add a scoring system.
+* Implement a true random word generator rather than usings a set list.  
+
+## 
+
 
 
